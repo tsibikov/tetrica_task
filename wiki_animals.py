@@ -1,5 +1,4 @@
 import wikipediaapi
-import pprint
 
 
 def get_animals_count(all_animals, letter):
