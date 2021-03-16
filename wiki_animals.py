@@ -1,5 +1,4 @@
 import wikipediaapi
-wiki_wiki = wikipediaapi.Wikipedia('ru')
 
 
 def get_animals_count(all_animals, letter):
@@ -11,8 +10,9 @@ def get_animals_count(all_animals, letter):
 
 
 if __name__ == "__main__":
+    wiki = wikipediaapi.Wikipedia('ru')
     alphabet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯ'
-    cat = wiki_wiki.page("Категория:Животные_по_алфавиту")
+    cat = wiki.page("Категория:Животные_по_алфавиту")
     all_animals = cat.categorymembers
     animals_count = {}
     for letter in alphabet:
