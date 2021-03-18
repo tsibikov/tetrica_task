@@ -1,10 +1,3 @@
-timestumps = {
-  'lesson': [1594663200, 1594666800], 
-  'pupil': [1594663340, 1594663389, 1594663390, 1594663395, 1594663396, 1594666472], 
-  'tutor': [1594663290, 1594663430, 1594663443, 1594666473] 
-}
-
-
 def appearance(intervals):
     lesson = intervals['lesson']
     pupil = intervals['pupil']
@@ -42,4 +35,10 @@ def make_ranges(intervals):
     return range_list
 
 
-print(appearance(timestumps))
+if __name__ == "__main__":
+    timestumps = {
+        'lesson': [1594663200, 1594666800], 
+        'pupil': [1594663340, 1594663389, 1594663390, 1594663395, 1594663396, 1594666472], 
+        'tutor': [1594663290, 1594663430, 1594663443, 1594666473] 
+    }
+    print(appearance(timestumps))
