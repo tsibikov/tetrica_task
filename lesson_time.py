@@ -8,13 +8,15 @@ def appearance(intervals):
     intervals_list = []    
     for pupil_timestump in pupil:
         if pupil_timestump in lesson_range:
-            result = check_in_range(pupil_timestump, pupil_ranges)
-            if result == True:
+            pupil_result = check_in_range(pupil_timestump, pupil_ranges)
+            tutor_result = check_in_range(pupil_timestump, tutor_ranges)
+            if pupil_result == True and tutor_result == True:
                 intervals_list.append(pupil_timestump)
     for tutor_timestump in tutor:
         if tutor_timestump in lesson_range:
-            result = check_in_range(tutor_timestump, pupil_ranges)
-            if result == True:
+            pupil_result = check_in_range(tutor_timestump, pupil_ranges)
+            tutor_result = check_in_range(tutor_timestump, tutor_ranges)
+            if pupil_result == True and tutor_result == True:
                 intervals_list.append(tutor_timestump)
     intervals_list.sort()
     time = 0
